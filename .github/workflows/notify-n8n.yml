@@ -1,0 +1,23 @@
+name: Notify n8n on new issue
+
+on:
+  issues:
+    types: [opened, edited, closed]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify n8n
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://devgooseserver-1.tail509c15.ts.net/webhook/github-to-notion'
+          method: 'POST'
+          contentType: 'application/json'
+          body: |
+            {
+              "issue_number": "${{ github.event.issue.number }}",
+              "title": "${{ github.event.issue.title }}",
+              "state": "${{ github.event.issue.state }}",
+              "url": "${{ github.event.issue.html_url }}"
+            }
