@@ -11,7 +11,7 @@ jobs:
       - name: Notify n8n
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://devgooseserver-1.tail509c15.ts.net/webhook/github-to-notion'
+          url: 'https://devgooseserver-1.tail509c15.ts.net/webhook-test/github-to-notion'
           method: 'POST'
           contentType: 'application/json'
           body: |
