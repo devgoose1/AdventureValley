@@ -18,6 +18,8 @@ cursor_component_texture = ExtResource("2_rt2n2")
 y_sort_enabled = true
 
 [node name="LevelRoot" type="Node2D" parent="GameRoot"]
+z_index = -1
+z_as_relative = false
 y_sort_enabled = true
 
 [node name="Level1" parent="GameRoot/LevelRoot" instance=ExtResource("2_pu3yx")]
