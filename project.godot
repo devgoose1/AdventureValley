@@ -29,6 +29,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GameDialogueManager="*res://scripts/globals/game_dialogue_manager.gd"
 GameManager="*res://scripts/globals/game_manager.gd"
 SceneManager="*res://scripts/globals/scene_manager.gd"
+DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 
 [display]
 
@@ -41,7 +42,7 @@ window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/discord-rpc-gd/plugin.cfg")
 
 [file_customization]
 
