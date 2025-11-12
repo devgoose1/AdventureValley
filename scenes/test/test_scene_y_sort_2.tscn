@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqfohh1g6tt1r"]
+
+[ext_resource type="PackedScene" uid="uid://qhj0f56foher" path="res://scenes/test/test_scene_tilemap_layer_y_sort.tscn" id="1_dcwus"]
+[ext_resource type="PackedScene" uid="uid://dxm3dmajglnk7" path="res://scenes/characters/player/player.tscn" id="2_c8pen"]
+
+[node name="TestSceneYSort2" type="Node2D"]
+
+[node name="GameRoot" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="TestSceneTilemapLayerYSort" parent="GameRoot" instance=ExtResource("1_dcwus")]
+
+[node name="Player" parent="GameRoot" instance=ExtResource("2_c8pen")]
+y_sort_enabled = false
+position = Vector2(265, 172)
+
+[node name="Camera2D" type="Camera2D" parent="GameRoot/Player"]
